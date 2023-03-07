@@ -68,15 +68,7 @@
 			</plugin>
 		</plugins>
 	</build>
-	<distributionManagement>
-        <!-- Target Anypoint Organization Repository -->
-        <repository>
-            <id>anypoint-exchange-v3</id>
-            <name>anypoint-exchange-v3</name>
-            <url>https://maven.anypoint.mulesoft.com/api/v1/organizations/13495eba-5f32-4770-87e7-c1ce09654f31/maven</url> <!-- copy and past your your-org-id here-->
-            <layout>default</layout>
-        </repository>
-    </distributionManagement>
+
 
 	<dependencies>
 		<dependency>

@@ -37,8 +37,8 @@
     <layout>default</layout>
 </repository>
 <repository>
-    <id>Exchange2</id>
-    <name>Exchange2 Repository</name>
+    <id>anypoint-exchange-v3</id>
+    <name>anypoint-exchange-v3</name>
     <url>https://maven.anypoint.mulesoft.com/api/v1/organizations/13495eba-5f32-4770-87e7-c1ce09654f31/maven</url>;
 </repository>
 </repositories>
