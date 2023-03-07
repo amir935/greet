@@ -52,6 +52,18 @@
 							<format>html</format>
 						</formats>
 					</coverage>
+					<cloudHubDeployment>
+					
+					        <uri>https://anypoint.mulesoft.com</uri>
+					        <muleVersion>4.4.0</muleVersion>
+					        <username>Amir122306</username>
+					        <password>Amir122306</password>
+					        <applicationName>greeting</applicationName>
+					        <workerType>MICRO</workerType>
+					        <objectStoreV2>true</objectStoreV2>
+					</cloudHubDeployment>
+					
+					
 				</configuration>
 			</plugin>
 		</plugins>
