@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:api-gateway="http://www.mulesoft.org/schema/mule/api-gateway"
+	xmlns:apikit="http://www.mulesoft.org/schema/mule/mule-apikit"
+	xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="
+http://www.mulesoft.org/schema/mule/mule-apikit http://www.mulesoft.org/schema/mule/mule-apikit/current/mule-apikit.xsd 
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/api-gateway http://www.mulesoft.org/schema/mule/api-gateway/current/mule-api-gateway.xsd">
+    <apikit:config name="greeting-config" api="resource::13495eba-5f32-4770-87e7-c1ce09654f31:greeting:1.0.0:raml:zip:greeting.raml" outboundHeadersMapName="outboundHeaders" httpStatusVarName="httpStatus" /><http:listener-config name="greeting-httpListenerConfig">
+        <http:listener-connection host="0.0.0.0" port="${http.port}" />
+    </http:listener-config>
+	<configuration-properties doc:name="Configuration properties" doc:id="6373da9d-2468-4f4a-a5b3-aa08a876673c" file="dev.yaml" />
+	<configuration doc:name="Configuration" doc:id="fb8f7b1e-5ad9-482d-b4e1-367621b7456e" defaultErrorHandler-ref="global-error-handlingError_Handler" />
+	<api-gateway:autodiscovery apiId="18540510" ignoreBasePath="true" doc:name="API Autodiscovery" doc:id="194b4b77-ce8b-4aff-86e1-de5c4f981569" flowRef="greeting-main" />
+</mule>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+	<sub-flow name="implementationSub_Flow" doc:id="74bbab62-2c7a-4283-813b-def27b113e88" >
+		<ee:transform doc:name="Transform Message" doc:id="207f054d-4318-46e4-bdbd-af80e5e2791b" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+ {
+  "message": "Hello batch " 
+              ++ attributes.queryParams.num  ++" ."++
+              "Today is " ++ (now() >> "EST")  as  String {
+    format: "dd-MM-yyyy hh-mm-ss" 
+}
+  }]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+	</sub-flow>
+</mule>
