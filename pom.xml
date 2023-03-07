@@ -130,6 +130,14 @@
 			<url>https://repository.mulesoft.org/releases/</url>
 			<layout>default</layout>
 		</repository>
+			
+		<repository>
+			<id>anypoint-exchange</id>
+			<name>Anypoint Exchange</name>
+			<url>https://maven.anypoint.mulesoft.com/api/v1/organizations/13495eba-5f32-4770-87e7-c1ce09654f31/maven</url>
+			<layout>default</layout>
+		</repository>
+
 	</repositories>
 
 	<pluginRepositories>
