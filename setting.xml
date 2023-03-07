@@ -1,15 +1,8 @@
 <?xml version="1.0"?>
 <settings>
 
-  <servers>
-    <server>
-      <id>Exchange2</id>
-      <username>Amir122306</username>
-      <password>Amir122306</password>
-    </server>
 
  
-  </servers>
 
   <pluginGroups>
     <pluginGroup>org.mule.tools</pluginGroup>
@@ -25,8 +18,8 @@
 
       <repositories>
   <repository>
-    <id>Exchange2</id>
-    <name>Exchange2 Repository</name>
+    <id>anypoint-exchange-v3</id>
+    <name>ExchangeV3 Repository</name>
     <url>https://maven.anypoint.mulesoft.com/api/v2/maven</url>;
     <layout>default</layout>
 </repository>
