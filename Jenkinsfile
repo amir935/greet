@@ -2,21 +2,21 @@ pipeline
 {
 agent: any
 stages {
-     stage(‘Build Application’){
+     stage('Build Application'){
           steps{
-                  bat ‘mvn clean install’
+                  bat 'mvn clean install'
         }
      }
  
-     stage(‘test  application){
+     stage('test  application'){
           steps{
                  bat ‘mvn test’
             }      
      }
 
-     stage(‘deploy application to cloudhub){
+     stage('deploy application to cloudhub'){
           steps {
-                   bat ‘mvn package deploy -DmuleDeploy’
+                   bat 'mvn package deploy -DmuleDeploy'
                     }           
           }
       }
