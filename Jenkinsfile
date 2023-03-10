@@ -16,7 +16,7 @@ stages {
 
      stage('deploy application to cloudhub'){
           steps {
-                   bat 'mvn package deploy -DmuleDeploy'
+                   bat 'mvn package deploy -DmuleDeploy -Dusername=Amir122306 -Dpassword=Amir122306'
                     }           
           }
       }
