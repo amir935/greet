@@ -1,10 +1,16 @@
 pipeline
 {
 agent any
+environment {
+
+  ANYPOINT_USERNAME = 'Amir122306'
+  ANYPOINT_PASSWORD =  'Amir122306'
+}
 stages {
      stage('Build Application'){
           steps{
-                  bat 'mvn clean'
+          
+                  bat 'mvn clean install -Dusername=$ANYPOINT_USERNAME -Dpassword=$ANYPOINT_PASSWORD'
         }
      }
  
@@ -15,14 +21,9 @@ stages {
      }
 
      stage('deploy application to cloudhub'){
-     environment {
-		CLOUDHUB_ENV = credentials('CLOUDHUB_ENV_SANDBOX')
-		ANYPOINT_USERNAME_DEV = credentials('ANYPOINT_USERNAME_DEV')
-		ANYPOINT_PASSWORD_DEV = credentials('ANYPOINT_PASSWORD_DEV')
-		
-      }
+     
           steps {
-                   bat 'mvn package deploy -DmuleDeploy -Dusername=Amir122306 -Dpassword=Amir122306'
+                   bat 'mvn package deploy -DmuleDeploy'
                     }           
           }
       }
