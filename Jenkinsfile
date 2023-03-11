@@ -1,10 +1,14 @@
 pipeline
 {
 agent any
+options {
+    skipDefaultCheckout()
+  }
 environment {
 
   ANYPOINT_USERNAME = 'Amir122306'
   ANYPOINT_PASSWORD =  'Amir122306'
+  MAVEN_OPTS = "-Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=debug"
 }
 stages {
      stage('Build Application'){
